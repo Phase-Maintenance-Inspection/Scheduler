@@ -284,19 +284,19 @@ class Scheduler extends Component {
         let schedulerHeader = <div />;
         if(config.headerEnabled) {
             schedulerHeader = (
-                <Row type="flex" align="middle" justify="space-between" style={{ border: '2px solid #e9e9e9', paddingRight: '10px'}}>
+                <Row type="flex" align="middle" justify="space-between" style={{ border: '2px solid #e9e9e9', paddingRight: '8px'}}>
                     {leftCustomHeader}
                     <Col>
                     <div style={{width: resourceTableWidth, borderRight: '2px solid #e9e9e9', textAlign: 'center'}}>
-                        <div className="container-grid">
-                        <div className="image-header" style={{ backgroundImage: `url(${projectImg})`}}></div>
-                        <div className="wrapper-header">
-                        <div className="text-header">{project}</div>
-                        <div className="text-header2">Project</div>
-                        <a className="text-header-link" href={projectUrl} target="_blank">Open in Gitlab</a>
-                        </div>
-                        <Icon type="more" style={{}} className="icon-header"/>
-                        </div>
+                        {/* <div className="container-grid">
+                        {/* <div className="image-header" style={{ backgroundImage: `url(${projectImg})`}}></div> */}
+                        {/* <div className="wrapper-header">
+                        <div className="text-header">{project}</div> */}
+                        {/* <div className="text-header2">Project</div> */}
+                        {/* <a className="text-header-link" href={projectUrl} target="_blank">Open in Gitlab</a> */}
+                        {/* </div> */}
+                        {/* <Icon type="more" style={{}} className="icon-header"/> */}
+                        {/* </div> */}
                     </div>
                     </Col>
                     <Col>

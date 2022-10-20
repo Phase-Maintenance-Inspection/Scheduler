@@ -20,9 +20,9 @@ class Nav extends Component {
         return (
             <div>
                 <ul style={ulStyle}>
-                    <li style={liStyle}>
+                    {/* <li style={liStyle}>
                         <span style={{fontWeight: 'bold'}}><a href="https://github.com/StephenChou1017/react-big-scheduler" target="_blank">React Big Scheduler</a></span>
-                    </li>
+                    </li> */}
                     <li style={liStyle}>
                         <Link target="_self"
                               to='/'>
@@ -35,7 +35,7 @@ class Nav extends Component {
                             <span>Read only</span>
                         </Link>
                     </li>
-                    <li style={liStyle}>
+                    {/* <li style={liStyle}>
                         <Link target="_self"
                               to='/locale'>
                             <span>Locale</span>
@@ -142,7 +142,7 @@ class Nav extends Component {
                               to='/custompopover'>
                             <span>Custom popover style</span>
                         </Link>
-                    </li>
+                    </li> */}
                 </ul>
                 <div style={{clear: "both", marginBottom: '24px'}}></div>
             </div>
