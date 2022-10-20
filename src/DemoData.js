@@ -2,80 +2,96 @@ const DemoData = {
     resources: [
         {
             id: 'r0',
-            name: 'Resource0',
-            bgColor: 'red',
-            issue: '#15'
-        },
-        {
-            id: 'r1',
-            name: 'Resource1',
-            author: "Hiram test",
-            bgColor: '#D9D9D9',
+            name: 'Flight Lane 1',
+            author: "Team 1",
+            bgColor: '#17C8E7',
             issue: '#1'
         },
         {
+            id: 'r1',
+            name: 'Flight Lane 2',
+            author: "Team 2",
+            bgColor: '#17E7E1',
+            issue: '#2'
+        },
+        {
             id: 'r2',
-            name: 'Resource2',
-            author: "Hiram test",
-            issue: '#99'
+            name: 'Flight Lane 3',
+            author: "Team 3",
+            bgColor: '#17E7AB',
+            issue: '#3'
         },
         {
             id: 'r3',
-            name: 'Resource3',
-            author: "Federico Osorio",
-            issue: '#645'
+            name: 'Flight Lane 4',
+            author: "Team 4",
+            bgColor: '#17E772',
+            issue: '#4'
         },
         {
             id: 'r4',
-            name: 'Resource4',
-            author: "Federico Osorio",
-            issue: '#33'
+            name: 'Flight Lane 5',
+            author: "Team 5",
+            bgColor: '#33E717',
+            issue: '#5'
         },
         {
             id: 'r5',
-            name: 'Resource5',
-            author: "Federico Osorio",
-            issue: '#7'
+            name: 'Flight Lane 6',
+            author: "Team 6",
+            bgColor: '#6CE717',
+            issue: '#6'
         },
         {
             id: 'r6',
-            name: 'Resource6',
-            author: "Federico Osorio",
-            issue: '#32'
+            name: 'Flight Lane 7',
+            author: "Team 7",
+            bgColor: '#F9F912',
+            issue: '#7'
         },
         {
             id: 'r7',
-            name: 'Resource 7Resource7, Resource7Resource7Resource7 Resource7Resource7Resource7Resource7Resource7Resource7Resource7',
-            author: "Federico Osorio",
-            bgColor: '#FA9E95',
-            issue: '#20'
+            name: 'Flight Lane 8',
+            author: "Team 8",
+            bgColor: '#F3A928',
+            issue: '#8'
         }
     ],
     events: [
         {
+            id: 0,
+            start: '2022-10-20 15:50:00',
+            end: '2022-12-19 23:30:00',
+            label: 'PMI1',
+            resourceId: 'r0',
+            title: 'I am locked',
+            movable: true,
+            resizable: true,
+            startResizable: false,
+            bgColor: '#17C8E7'
+        },
+        {
             id: 1,
-            start: '2017-12-18 09:30:00',
-            end: '2017-12-19 23:30:00',
+            start: '2022-10-20 15:50:00',
+            end: '2022-12-19 23:30:00',
             resourceId: 'r1',
             title: 'I am finished',
             label: 'QA Failed',
-            img: 'https://miro.medium.com/fit/c/28/28/1*UJzclN5h-DYWjRyVqXThUw.png',
-            bgColor: '#D9D9D9',
-            showPopover: false
+            // img: 'https://miro.medium.com/fit/c/28/28/1*UJzclN5h-DYWjRyVqXThUw.png',
+            bgColor: '#17E7E1',
         },
         {
             id: 2,
-            start: '2017-12-18 12:30:00',
-            end: '2017-12-26 23:30:00',
+            start: '2022-10-20 15:50:00',
+            end: '2022-12-19 23:30:00',
             resourceId: 'r2',
             title: 'I am not resizable',
             label: 'Development',
-            resizable: false
         },
         {
             id: 3,
-            start: '2017-12-19 12:30:00',
-            end: '2017-12-20 23:30:00',
+            start: '2022-10-20 15:50:00',
+            end: '2022-12-19 23:30:00',
             resourceId: 'r3',
             title: 'I am not movable',
             label: 'Development',
@@ -83,8 +99,8 @@ const DemoData = {
         },
         {
             id: 4,
-            start: '2017-12-19 14:30:00',
-            end: '2017-12-20 23:30:00',
+            start: '2022-10-20 15:50:00',
+            end: '2022-12-19 23:30:00',
             resourceId: 'r4',
             title: 'I am not start-resizable',
             label: 'QA Complete',
@@ -92,8 +108,8 @@ const DemoData = {
         },
         {
             id: 5,
-            start: '2017-12-19 15:30:00',
-            end: '2017-12-20 23:30:00',
+            start: '2022-10-20 15:50:00',
+            end: '2022-12-15 23:30:00',
             resourceId: 'r5',
             title: 'I am not end-resizable',
             label: 'QA',
@@ -101,31 +117,20 @@ const DemoData = {
         },
         {
             id: 6,
-            start: '2017-12-19 15:35:00',
-            end: '2017-12-19 23:30:00',
+            start: '2022-10-20 15:50:00',
+            end: '2022-12-19 23:30:00',
             resourceId: 'r6',
             title: 'I am normal',
             label: 'To Do',
         },
         {
             id: 7,
-            start: '2017-12-19 15:40:00',
-            end: '2017-12-20 23:30:00',
+            start: '2022-10-20 15:50:00',
+            end: '2022-12-19 23:30:00',
             resourceId: 'r7',
             label: 'Development',
             title: 'I am exceptional',
             bgColor: '#FA9E95'
-        },
-        {
-            id: 8,
-            start: '2017-12-19 15:50:00',
-            end: '2017-12-19 23:30:00',
-            label: 'QA',
-            resourceId: 'r0',
-            title: 'I am locked',
-            movable: false,
-            resizable: false,
-            bgColor: 'red'
         },
     ],
     eventsForTaskView: [

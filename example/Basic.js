@@ -5,7 +5,6 @@ import {PropTypes} from 'prop-types'
 // import 'antd/lib/style/index.less';     //Add this code for locally example
 import Scheduler, {SchedulerData, ViewTypes, DATE_FORMAT, DemoData} from '../src/index'
 import Nav from './Nav'
-import Tips from './Tips'
 import ViewSrcCode from './ViewSrcCode'
 import withDragDropContext from './withDnDContext'
 
@@ -14,7 +13,7 @@ class Basic extends Component{
         super(props);
 
         //let schedulerData = new SchedulerData(new moment("2017-12-18").format(DATE_FORMAT), ViewTypes.Week);
-        let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Week);
+        let schedulerData = new SchedulerData('2022-10-18', ViewTypes.Week);
         schedulerData.localeMoment.locale('en');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
@@ -29,7 +28,7 @@ class Basic extends Component{
             <div>
                 <Nav />
                 <div>
-                    <h3 style={{textAlign: 'center'}}>Basic example<ViewSrcCode srcCodeUrl="https://github.com/StephenChou1017/react-big-scheduler/blob/master/example/Basic.js" /></h3>
+                    <h3 style={{textAlign: 'center'}}><b>Phase Maintenance Inspection</b></h3>
                     <Scheduler schedulerData={viewModel}
                                prevClick={this.prevClick}
                                nextClick={this.nextClick}
@@ -51,7 +50,6 @@ class Basic extends Component{
                                toggleExpandFunc={this.toggleExpandFunc}
                     />
                 </div>
-                <Tips />
             </div>
         )
     }

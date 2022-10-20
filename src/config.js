@@ -8,7 +8,7 @@ export default {
     tableHeaderHeight: 40,
     schedulerMinWidth: 700,
 
-    project: 'Set ProjectName',
+    project: 'PMI',
     projectUrl: '',
     projectImage: '',
 
@@ -67,7 +67,7 @@ export default {
     relativeMove: true,
     defaultExpanded: true,
 
-    resourceName: 'Issues',
+    resourceName: 'PMI',
     authorName: 'Author',
     taskName: 'Task Name',
     agendaViewHeader: 'Agenda',
