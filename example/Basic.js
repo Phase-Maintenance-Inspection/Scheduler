@@ -8,12 +8,14 @@ import Nav from './Nav'
 import ViewSrcCode from './ViewSrcCode'
 import withDragDropContext from './withDnDContext'
 
+const time = new Date();
+
 class Basic extends Component{
     constructor(props){
         super(props);
 
-        //let schedulerData = new SchedulerData(new moment("2017-12-18").format(DATE_FORMAT), ViewTypes.Week);
-        let schedulerData = new SchedulerData('2022-10-18', ViewTypes.Week);
+        // let schedulerData = new SchedulerData(new moment("2017-12-18").format(DATE_FORMAT), ViewTypes.Week);
+        let schedulerData = new SchedulerData(`${time.getFullYear()}-${time.getMonth()+1}-${time.getDate()}`, ViewTypes.Week);
         schedulerData.localeMoment.locale('en');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
@@ -87,15 +89,15 @@ class Basic extends Component{
     }
 
     eventClicked = (schedulerData, event) => {
-        alert(`You just clicked an event: {id: ${event.id}, title: ${event.title}}`);
+        // alert(`You just clicked an event: {id: ${event.id}, title: ${event.title}}`);
     };
 
     ops1 = (schedulerData, event) => {
-        alert(`You just executed ops1 to event: {id: ${event.id}, title: ${event.title}}`);
+        // alert(`You just executed ops1 to event: {id: ${event.id}, title: ${event.title}}`);
     };
 
     ops2 = (schedulerData, event) => {
-        alert(`You just executed ops2 to event: {id: ${event.id}, title: ${event.title}}`);
+        // alert(`You just executed ops2 to event: {id: ${event.id}, title: ${event.title}}`);
     };
 
     newEvent = (schedulerData, slotId, slotName, start, end, type, item) => {

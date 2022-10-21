@@ -67,7 +67,7 @@ export default {
     relativeMove: true,
     defaultExpanded: true,
 
-    resourceName: 'PMI',
+    resourceName: 'Flight Line:',
     authorName: 'Author',
     taskName: 'Task Name',
     agendaViewHeader: 'Agenda',

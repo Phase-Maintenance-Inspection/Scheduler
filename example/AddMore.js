@@ -5,11 +5,13 @@ import Nav from './Nav'
 import ViewSrcCode from './ViewSrcCode'
 import withDragDropContext from './withDnDContext'
 
+const time = new Date();
+
 class AddMore extends Component{
     constructor(props){
         super(props);
 
-        let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Week, false, false, {
+        let schedulerData = new SchedulerData(`${time.getFullYear()}-${time.getMonth()}-${time.getDate()}`, ViewTypes.Week, false, false, {
             dayMaxEvents: 2,
             weekMaxEvents: 4,
             monthMaxEvents: 4,
