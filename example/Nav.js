@@ -1,41 +1,39 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Nav extends Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
-        let ulStyle = {
-            listStyle: "none",
-            margin: "0px",
-            padding: "0px",
-            width: "auto"
-        };
-        let liStyle = {
-            float: 'left',
-            marginLeft: '20px'
-        };
-        return (
-            <div>
-                <ul style={ulStyle}>
-                    <li style={liStyle}>
+  render() {
+    let ulStyle = {
+      listStyle: "none",
+      margin: "0px",
+      padding: "0px",
+      width: "auto",
+    };
+    let liStyle = {
+      float: "left",
+      marginLeft: "20px",
+    };
+    return (
+      <div>
+        <ul style={ulStyle}>
+          {/* <li style={liStyle}>
                         <span style={{fontWeight: 'bold'}}><a href="https://github.com/StephenChou1017/react-big-scheduler" target="_blank">React Big Scheduler</a></span>
-                    </li>
-                    <li style={liStyle}>
-                        <Link target="_self"
-                              to='/'>
-                            <span>Basic</span>
-                        </Link>
-                    </li>
-                    <li style={liStyle}>
-                        <Link target="_self"
-                              to='/readonly'>
-                            <span>Read only</span>
-                        </Link>
-                    </li>
-                    <li style={liStyle}>
+                    </li> */}
+          <li style={liStyle}>
+            <Link target="_self" to="/">
+              <span>Basic</span>
+            </Link>
+          </li>
+          <li style={liStyle}>
+            <Link target="_self" to="/readonly">
+              <span>Read only</span>
+            </Link>
+          </li>
+          {/* <li style={liStyle}>
                         <Link target="_self"
                               to='/locale'>
                             <span>Locale</span>
@@ -142,12 +140,12 @@ class Nav extends Component {
                               to='/custompopover'>
                             <span>Custom popover style</span>
                         </Link>
-                    </li>
-                </ul>
-                <div style={{clear: "both", marginBottom: '24px'}}></div>
-            </div>
-        )
-    }
+                    </li> */}
+        </ul>
+        <div style={{ clear: "both", marginBottom: "24px" }}></div>
+      </div>
+    );
+  }
 }
 
-export default Nav
+export default Nav;
