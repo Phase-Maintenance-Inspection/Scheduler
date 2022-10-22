@@ -64,7 +64,7 @@ export default {
   calendarPopoverEnabled: true,
   recurringEventsEnabled: true,
   headerEnabled: true,
-  displayWeekend: false,
+  displayWeekend: true,
   relativeMove: true,
   defaultExpanded: true,
 
