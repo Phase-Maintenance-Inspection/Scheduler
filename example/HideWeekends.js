@@ -11,8 +11,9 @@ class HideWeekends extends Component{
     constructor(props){
         super(props);
 
+        const time = new Date();
         //let schedulerData = new SchedulerData(new moment("2017-12-18").format(DATE_FORMAT), ViewTypes.Week);
-        let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Week, false, false, {
+        let schedulerData = new SchedulerData(`${time.getFullYear()}-${time.getMonth() + 1}-${time.getDate()}`, ViewTypes.Week, false, false, {
             displayWeekend: false,
             weekCellWidth: '16%'
         });
