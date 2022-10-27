@@ -65,9 +65,8 @@ const DemoData = {
       label: "PMI 1",
       resourceId: "r0",
       title: "I am locked",
-      movable: true,
-      resizable: true,
-      startResizable: false,
+      // movable: true,
+      // resizable: true,
       bgColor: "#17C8E7",
     },
     {
@@ -96,7 +95,6 @@ const DemoData = {
       resourceId: "r3",
       title: "I am not movable",
       label: "PMI 1",
-      movable: false,
       bgColor: "#33E717",
     },
     {
@@ -106,7 +104,6 @@ const DemoData = {
       resourceId: "r4",
       title: "I am not start-resizable",
       label: "PMI 1",
-      startResizable: false,
       bgColor: "#F5D120",
     },
     {
@@ -116,7 +113,6 @@ const DemoData = {
       resourceId: "r5",
       title: "I am not end-resizable",
       label: "PMI 1",
-      endResizable: false,
       bgColor: "#F3A928",
     },
     {

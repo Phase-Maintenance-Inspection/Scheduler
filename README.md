@@ -57,7 +57,8 @@ let events = [
                       label: 'QA Failed',
                       img: 'https://miro.medium.com/fit/c/28/28/1*UJzclN5h-DYWjRyVqXThUw.png',
                       bgColor: '#D9D9D9',
-                      showPopover: false
+                      showPopover: false,
+                      startResizable: true
                   },
                   {
                       id: 2,
@@ -82,7 +83,7 @@ let events = [
                      end: '2017-12-20 23:30:00',
                      resourceId: 'r1',
                      title: 'I am not start-resizable',
-                     startResizable: false
+                     startResizable: true
                  },
                  {
                      id: 5,

@@ -207,12 +207,12 @@ table.resource-table tr td:last-child, /*table.scheduler-bg-table tr td:last-chi
 }
 
 .ant-radio-button-wrapper-checked {
-    background-color: #108EE9;
+    background-color: #10afe9;
     color: #FFFFFF;
 }
 
 .icon-nav:hover{
-    color:#1E90FF !important;
+    color:#1ebcff !important;
     box-shadow: 0 0 0px !important;
     cursor: pointer;
 }
