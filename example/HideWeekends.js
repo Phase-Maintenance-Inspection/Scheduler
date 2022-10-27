@@ -26,6 +26,7 @@ class HideWeekends extends Component {
       {
         displayWeekend: false,
         weekCellWidth: "16%",
+        bgColor: "#17C8E7",
       }
     );
     schedulerData.localeMoment.locale("en");

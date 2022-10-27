@@ -16,7 +16,7 @@ import OverlapCheck from "./OverlapCheck";
 import NoCrossSlotMove from "./NoCrossSlotMove";
 import FreezeFirstRow from "./FreezeFirstRow";
 import ResourceClickable from "./ResourceClickable";
-// import HideWeekends from './HideWeekends'
+import HideWeekends from './HideWeekends'
 import CustomTimeWindow from "./CustomTimeWindow";
 import InfiniteScroll from "./InfiniteScroll";
 import InfiniteScroll2 from "./InfiniteScroll2";
@@ -41,7 +41,7 @@ render(
     <Route path="/resourceclickable" component={ResourceClickable} />
     <Route path="/comingsoon" component={ComingSoon} />
     <Route path="/customtableheaders" component={CustomTableHeaders} />
-    {/* <Route path="/hideweekends" component={HideWeekends}/> */}
+    <Route path="/hideweekends" component={HideWeekends}/>
     <Route path="/customtimewindow" component={CustomTimeWindow} />
     <Route path="/infinitescroll" component={InfiniteScroll} />
     <Route path="/infinitescroll2" component={InfiniteScroll2} />
