@@ -95,8 +95,11 @@ class EventItemPopover extends Component {
                         <Col span={2}>
                             <div className="status-dot" style={{backgroundColor: statusColor}} />
                         </Col>
-                        <Col span={22} className="overflow-text">
-                            <span className="header2-text" title={title}>{title}</span>
+                        <Col className="overflow-text" style={{paddingTop: '6px'}}>
+                            <h2 className="header-text">{title}</h2>
+                        </Col>
+                        <Col style={{marginLeft: '90px'}}>
+                            <th className="help-text">{start.format(dateFormat)}</th><th className="header2-text">-</th><th className="help-text" style={{paddingLeft: '12px'}}>{end.format(dateFormat)}</th>
                         </Col>
                     </Row>
                     {subtitleRow}
@@ -105,10 +108,17 @@ class EventItemPopover extends Component {
                             <div />
                         </Col>
                         <Col span={22}>
-                            <span className="header1-text">{start.format('HH:mm')}</span><span className="help-text" style={{marginLeft: '8px'}}>{start.format(dateFormat)}</span><span className="header2-text"  style={{marginLeft: '8px'}}>-</span><span className="header1-text" style={{marginLeft: '8px'}}>{end.format('HH:mm')}</span><span className="help-text" style={{marginLeft: '8px'}}>{end.format(dateFormat)}</span>
+                            <th>Working Days: </th>
                         </Col>
                     </Row>
-                    {opsRow}
+                    <Row type="flex" align="middle">
+                      <Col span={2}>
+                        <div />
+                      </Col>
+                      <Col span={22}>
+                        <th>Off Days: </th>
+                      </Col>
+                    </Row>
                 </div>
             );
         }
