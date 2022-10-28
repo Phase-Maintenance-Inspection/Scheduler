@@ -24,7 +24,7 @@ class AddResource extends Component{
         }
     }
     showModal = () => {
-        this.setState({ visible: true });
+        this.setState({ visible: false });
     }
     handleCancel = () => {
         this.setState({ visible: false });
@@ -50,7 +50,7 @@ class AddResource extends Component{
 
         let leftCustomHeader = (
             <div>
-                <span style={{ fontWeight: 'bold' }}><a onClick={this.showModal}>Add a resource</a></span>
+                <span style={{ fontWeight: 'bold' }}> Add a resource </span>
                 <AddResourceForm
                     ref={this.saveFormRef}
                     visible={this.state.visible}
@@ -65,9 +65,8 @@ class AddResource extends Component{
             <div>
                 <Nav />
                 <div>
-                    <h3 style={{textAlign: 'center'}}>Add resource<ViewSrcCode srcCodeUrl="https://github.com/StephenChou1017/react-big-scheduler/blob/master/example/AddResource.js" /></h3>
-                    <Scheduler schedulerData={viewModel}
-                               prevClick={this.prevClick}
+                    <h3 style={{textAlign: 'center'}}>Add resource</h3>
+                    {/* <Scheduler prevClick={this.prevClick}
                                nextClick={this.nextClick}
                                onSelectDate={this.onSelectDate}
                                onViewChange={this.onViewChange}
@@ -82,7 +81,7 @@ class AddResource extends Component{
                                newEvent={this.newEvent}
                                leftCustomHeader={leftCustomHeader}
                                toggleExpandFunc={this.toggleExpandFunc}
-                    />
+                    /> */}
                 </div>
             </div>
         )
@@ -157,30 +156,24 @@ class AddResource extends Component{
     }
 
     updateEventStart = (schedulerData, event, newStart) => {
-        if(confirm(`Do you want to adjust the start of the event? {eventId: ${event.id}, eventTitle: ${event.title}, newStart: ${newStart}}`)) {
-            schedulerData.updateEventStart(event, newStart);
-        }
+        schedulerData.updateEventStart(event, newStart);
         this.setState({
             viewModel: schedulerData
         })
     }
 
     updateEventEnd = (schedulerData, event, newEnd) => {
-        if(confirm(`Do you want to adjust the end of the event? {eventId: ${event.id}, eventTitle: ${event.title}, newEnd: ${newEnd}}`)) {
-            schedulerData.updateEventEnd(event, newEnd);
-        }
+        schedulerData.updateEventEnd(event, newEnd);
         this.setState({
             viewModel: schedulerData
         })
     }
 
     moveEvent = (schedulerData, event, slotId, slotName, start, end) => {
-        if(confirm(`Do you want to move the event? {eventId: ${event.id}, eventTitle: ${event.title}, newSlotId: ${slotId}, newSlotName: ${slotName}, newStart: ${start}, newEnd: ${end}`)) {
-            schedulerData.moveEvent(event, slotId, slotName, start, end);
-            this.setState({
-                viewModel: schedulerData
-            })
-        }
+        schedulerData.moveEvent(event, slotId, slotName, start, end);
+        this.setState({
+            viewModel: schedulerData
+        })
     }
 
     addResource = (resourceName) => {
