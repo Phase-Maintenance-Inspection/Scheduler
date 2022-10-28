@@ -58,7 +58,7 @@ export default {
   movable: true,
   creatable: true,
   crossResourceMove: true,
-  checkConflict: false,
+  checkConflict: true,
   scrollToSpecialMomentEnabled: true,
   eventItemPopoverEnabled: true,
   calendarPopoverEnabled: true,
