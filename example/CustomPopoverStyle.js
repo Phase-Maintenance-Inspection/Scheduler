@@ -122,18 +122,14 @@ class CustomPopoverStyle extends Component{
     }
 
     updateEventStart = (schedulerData, event, newStart) => {
-        if(confirm(`Do you want to adjust the start of the event? {eventId: ${event.id}, eventTitle: ${event.title}, newStart: ${newStart}}`)) {
-            schedulerData.updateEventStart(event, newStart);
-        }
+        schedulerData.updateEventStart(event, newStart);
         this.setState({
             viewModel: schedulerData
         })
     }
 
     updateEventEnd = (schedulerData, event, newEnd) => {
-        if(confirm(`Do you want to adjust the end of the event? {eventId: ${event.id}, eventTitle: ${event.title}, newEnd: ${newEnd}}`)) {
-            schedulerData.updateEventEnd(event, newEnd);
-        }
+        schedulerData.updateEventEnd(event, newEnd);
         this.setState({
             viewModel: schedulerData
         })
