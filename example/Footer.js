@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import image from "../images/usArmy.png";
 
 class Footer extends Component {
   constructor(props) {
@@ -8,26 +7,6 @@ class Footer extends Component {
   }
 
   render() {
-    let ulStyle = {
-      listStyle: "none",
-      margin: "0px",
-      padding: "0px",
-    };
-    let liStyle = {
-      float: "left",
-      marginLeft: "20px",
-    };
-    let myNav = {
-      height: "50px",
-      liStyle: "none",
-      lineHeight: "50px",
-      backgroundColor: "#333",
-    };
-    let liaStyle = {
-      display: "inlineBlock",
-      textAlign: "center",
-      padding: "14px 16px",
-    }
     let footer = {
       padding: "10px 20px",
       background: "#333",
@@ -38,6 +17,7 @@ class Footer extends Component {
     }
     let armyLogo = {
       float: "left",
+      marginTop: "18px",
       position: "absolute",
       width: "50px",
     }
@@ -45,7 +25,7 @@ class Footer extends Component {
     return (
       <div>
         <footer style={footer}>
-          <image style={armyLogo} src={image}/>
+          <img style={armyLogo} src={"../images/usArmy.png"}/>
           <div style={{ clear: "both", marginTop: "18px", color: "#333" }}></div>
           <p style={pFooter}>US Army Combat Aviation Brigade Hawaii: Phase Maintenance Inspection</p>
           <p style={pFooter}>Author(s): Kirsten-Elise Rensaa, Lise Marie Nilsen, Jonathan Ma, Adam Joseph Parrilla</p>
