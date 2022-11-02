@@ -33,7 +33,6 @@ class Nav extends Component {
         <nav style={myNav}>
           <ul style={ulStyle}>
             <li style={liStyle}><a style={liaStyle} href="">Home</a></li>
-            <li style={liStyle}><a style={liaStyle} href="tasks/">Tasks</a></li>
           </ul>
         </nav>
         <div style={{ clear: "both", marginBottom: "18px" }}></div>
