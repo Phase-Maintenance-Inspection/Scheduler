@@ -12,6 +12,7 @@ import Scheduler, {
 import Nav from "./Nav";
 import ViewSrcCode from "./ViewSrcCode";
 import withDragDropContext from "./withDnDContext";
+import Footer from './Footer';
 
 const time = new Date();
 
@@ -63,6 +64,7 @@ class Basic extends Component {
             toggleExpandFunc={this.toggleExpandFunc}
           />
         </div>
+        <Footer/>
       </div>
     );
   }

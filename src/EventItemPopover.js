@@ -49,7 +49,6 @@ class EventItemPopover extends Component {
                 }
             }
 
-            let opsRow = <div />;
             if(viewEventText !== undefined && viewEventClick !== undefined && (eventItem.clickable1 == undefined || eventItem.clickable1)){
                 let col = (
                     <Col span={22}>
@@ -63,28 +62,12 @@ class EventItemPopover extends Component {
                         </Col>
                     )
                 };
-                opsRow = (
-                    <Row type="flex" align="middle">
-                        <Col span={2}>
-                            <div />
-                        </Col>
-                        {col}
-                    </Row>
-                );
             }
             else if(viewEvent2Text !== undefined && viewEvent2Click !== undefined && (eventItem.clickable2 == undefined || eventItem.clickable2)) {
                 let col = (
                     <Col span={22}>
                         <span className="header2-text" style={{color: '#108EE9', cursor: 'pointer'}} onClick={() => {viewEvent2Click(schedulerData, eventItem);}}>{viewEvent2Text}</span>
                     </Col>
-                );
-                opsRow = (
-                    <Row type="flex" align="middle">
-                        <Col span={2}>
-                            <div />
-                        </Col>
-                        {col}
-                    </Row>
                 );
             }
 
