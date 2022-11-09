@@ -58,7 +58,7 @@ class ResourceView extends Component {
             }}>{item.slotName}</a></span>
                 : <span className="slot-cell">{indents}<span className="slot-text header4-text overflow-text" style={{width: width - 80}}>{item.slotName}</span></span>;
             let slotItem = (
-                <div style={{width: width}}>
+                <button style={{width: width}}>
                     <div className="overflow-text header2-text" style={{textAlign: "left", color: '#F08421', fontSize: '14px', marginBottom:'15px'}}>
                          {item.slotIssue ? item.slotIssue : ''}
                     </div>
@@ -68,7 +68,7 @@ class ResourceView extends Component {
                      <div className="overflow-text header2-text" style={{textAlign: "left", marginTop: '15px'}}>
                          <span className=' overflow-text header3-text'>Assignee:</span> {item.slotAuthor ? item.slotAuthor : 'Unassignee'}
                     </div>
-                </div>
+                </button>
                  
             );
 
