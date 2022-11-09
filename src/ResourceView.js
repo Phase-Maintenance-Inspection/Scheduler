@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {PropTypes} from 'prop-types'
 import Icon from 'antd/lib/icon'
 import Popover from 'antd/lib/popover'
+import { Input } from 'antd'
+import DemoData from '../src/index'
 
 class ResourceView extends Component {
 
@@ -22,13 +24,9 @@ class ResourceView extends Component {
         const {schedulerData, contentScrollbarHeight, slotClickedFunc, slotItemTemplateResolver, toggleExpandFunc} = this.props;
         const {renderData, config} = schedulerData;
 
-        // const [open, setOpen] = useState(false);
-
         let width = schedulerData.getResourceTableWidth() - 2;
         let paddingBottom = contentScrollbarHeight;
         let displayRenderData = renderData.filter(o => o.render);
-        // var modal = document.getElementById("changeLaneModal");
-        // var span = document.getElementsByClassName("close")[0];
 
         let resourceList = displayRenderData.map((item) => {
             let bgColor = config.defaultEventBgColor;
@@ -58,19 +56,22 @@ class ResourceView extends Component {
             }
             indents.push(indent);
 
-            // const handleOpenChange = (newOpen) => {
-            //     setOpen(newOpen);
-            //   };
-
-            // const closeModal= () => {
-            //     modal.toggle = "none";
-            // };
+            const changeLaneName= (name) =>{
+                console.log(name)
+            }
+            
+            const content = (
+                <div>
+                  <Input id = "laneInput" defaultValue={y} />
+                  <button onClick={() => changeLaneName(document.getElementById('laneInput').value)}>Submit</button>
+                </div>
+              );
 
             let a = slotClickedFunc != undefined ? <span className="slot-cell">{indents}<a className="slot-text" style={{width: width}} onClick={() => {
                 slotClickedFunc(schedulerData, item);
             }}>{item.slotName}</a></span>
                 : <span className="slot-cell">{indents}<span className="slot-text header4-text overflow-text" style={{width: width - 80}}>{item.slotName}</span></span>;
-            let slotItem = (
+                let slotItem = (
                 <Popover content={content} title="Title" trigger="click">
                 <button style={{width: width}}  id='ChangeLaneButton'>
                     <div className="overflow-text header2-text" style={{textAlign: "left", color: '#F08421', fontSize: '14px', marginBottom:'15px'}}>
@@ -94,12 +95,7 @@ class ResourceView extends Component {
                     slotItem = temp;
             }
 
-            const content = (
-                <div>
-                  <p>Content</p>
-                  <p>Content</p>
-                </div>
-              );
+
 
             // let pop = (
             //     <Popover
