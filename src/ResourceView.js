@@ -62,7 +62,7 @@ class ResourceView extends Component {
             
             const content = (
                 <div>
-                  <Input id = "laneInput" defaultValue={y} />
+                  <Input id = "laneInput" defaultValue={item.slotName} />
                   <button onClick={() => changeLaneName(document.getElementById('laneInput').value)}>Submit</button>
                 </div>
               );
