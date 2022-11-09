@@ -68,7 +68,7 @@ export default {
   relativeMove: true,
   defaultExpanded: true,
 
-  resourceName: "Flight Lane:",
+  resourceName: "Flight Lane: ",
   authorName: "Author",
   taskName: "Task Name",
   agendaViewHeader: "Agenda",
