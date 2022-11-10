@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import {PropTypes} from 'prop-types'
 import Icon from 'antd/lib/icon'
+import Popover from 'antd/lib/popover'
+import { Input } from 'antd'
+import DemoData from '../src/index'
 
 class ResourceView extends Component {
 
@@ -53,12 +56,24 @@ class ResourceView extends Component {
             }
             indents.push(indent);
 
+            const changeLaneName= (name) =>{
+                console.log(name)
+            }
+            
+            const content = (
+                <div>
+                  <Input id = "laneInput" defaultValue={item.slotName} />
+                  <button onClick={() => changeLaneName(document.getElementById('laneInput').value)}>Submit</button>
+                </div>
+              );
+
             let a = slotClickedFunc != undefined ? <span className="slot-cell">{indents}<a className="slot-text" style={{width: width}} onClick={() => {
                 slotClickedFunc(schedulerData, item);
             }}>{item.slotName}</a></span>
                 : <span className="slot-cell">{indents}<span className="slot-text header4-text overflow-text" style={{width: width - 80}}>{item.slotName}</span></span>;
-            let slotItem = (
-                <div style={{width: width}}>
+                let slotItem = (
+                <Popover content={content} title="Title" trigger="click">
+                <button style={{width: width}}  id='ChangeLaneButton'>
                     <div className="overflow-text header2-text" style={{textAlign: "left", color: '#F08421', fontSize: '14px', marginBottom:'15px'}}>
                          {item.slotIssue ? item.slotIssue : ''}
                     </div>
@@ -68,7 +83,9 @@ class ResourceView extends Component {
                      <div className="overflow-text header2-text" style={{textAlign: "left", marginTop: '15px'}}>
                          <span className=' overflow-text header3-text'>Assignee:</span> {item.slotAuthor ? item.slotAuthor : 'Unassignee'}
                     </div>
-                </div>
+                </button>
+                </Popover>
+                
                  
             );
 
@@ -77,6 +94,30 @@ class ResourceView extends Component {
                 if(!!temp)
                     slotItem = temp;
             }
+
+
+
+            // let pop = (
+            //     <Popover
+            //         content={<a onClick={hide}>Close</a>}
+            //         title="Title"
+            //         trigger="click"
+            //         open={open}
+            //         onOpenChange={handleOpenChange}
+            //         >
+            //         <Button type="primary">Click me</Button>
+            //     </Popover>
+
+            // );
+
+            // let laneModal = (
+            //     <Popover id="changeLaneModal" placement="right">
+            //         <div class="modal-content">
+            //             <span class="close" onClick={() => {closeModal();}}>&times;</span>
+            //             <p>Some text in the Modal..</p>
+            //         </div>
+            //     </Popover>
+            // );
 
             let tdStyle = { height: item.rowHeight, display: 'inline-block' };
             if(item.groupOnly) {
